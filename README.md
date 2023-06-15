@@ -8,7 +8,7 @@ Current subjective forecasting methods for retail have little data to back them 
 If successful, you'll have flexed some new skills in a real world example. For grocery stores, more accurate forecasting can decrease food waste related to overstocking and improve customer satisfaction. The results of this ongoing [competition](https://www.kaggle.com/competitions/store-sales-time-series-forecasting/overview), over time, might even ensure your local store has exactly what you need the next time you shop.
 
 ### Dataset Description
-In this [competition](https://www.kaggle.com/competitions/store-sales-time-series-forecasting/overview), you will predict sales for the thousands of product families sold at Favorita stores located in Ecuador. The training data includes dates, store and product information, whether that item was being promoted, as well as the sales numbers. Additional files include supplementary information that may be useful in building your models.
+In this [competition](https://www.kaggle.com/competitions/store-sales-time-series-forecasting/overview), you will predict sales for the thousands of product families sold at Favorita stores located in Ecuador. The training data includes dates, store and product information, whether that item was being promoted, as well as the sales numbers. Additional files include supplementary information that may be useful in building your models. The dataset can be obtained in this [link](https://www.kaggle.com/competitions/store-sales-time-series-forecasting/data).
 
 #### train.csv
 - The training data, comprising time series of features *store_nbr*, *family*, and *onpromotion* as well as the target sales.
