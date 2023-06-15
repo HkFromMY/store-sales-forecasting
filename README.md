@@ -36,3 +36,31 @@ In this [competition](https://www.kaggle.com/competitions/store-sales-time-serie
 ### Additional Notes
 - Wages in the public sector are paid every two weeks on the 15 th and on the last day of the month. Supermarket sales could be affected by this.
 - A magnitude 7.8 earthquake struck Ecuador on April 16, 2016. People rallied in relief efforts donating water and other first need products which greatly affected supermarket sales for several weeks after the earthquake.
+
+### Analysis
+![image](https://github.com/HkFromMY/store-sales-forecasting/assets/48499555/c333b0c2-5fcb-4d0b-a0c2-3452464220e1)
+According to the image above, there is strong positive correlation between the `sales` and `transactions` variables. This indicates that increase in the `transactions` variable will lead to the increase in the `sales` variable too. Therefore, this correlation may be used to forecast the sales in the future. Besides, from the chart above, we can see that there is seasonal pattern where the sales increases towards the end of the year, especially in December every year. Hence, there is some seasonality in the time-series dataset.
+
+![image](https://github.com/HkFromMY/store-sales-forecasting/assets/48499555/68eee12d-da17-48eb-8998-1ea1df24a76c)
+According to the image above, the transactions distribution in December every year is obviously higher as compared to other months. Therefore, this means that the sales and total transactions in December is higher which can be used to forecast sales.
+
+![image](https://github.com/HkFromMY/store-sales-forecasting/assets/48499555/12b39a41-6dbb-482e-9609-b5c626d6da90)
+According to the scatterplot above, there is a strong positive correlation between the sales and transactions found where increase in the trasnactions means increase in the sales. 
+
+![image](https://github.com/HkFromMY/store-sales-forecasting/assets/48499555/bba99181-70bc-447b-97bb-3fa1b37ac9f1)
+The line chart above indicates that the transactions is at its highest during the weekend that may indicate that the customers like to shop in the grocery store during weekend to refill their supply. 
+
+
+### Pre-Processing Steps
+1. Promotion features are created to include onpromotion column into the feature set so that the model can learn the relationship between the onpromotion and the sales to make predictions.
+2. Holiday features are also included in the feature set so the model estimate sudden increase in some days where the holidays are placed.
+3. As the country is heavily oil-dependent, so the oil price also affect the buying power of the customers. Therefore, the oil feature are also included in the feature set to make predictions
+4. First feature (`X_1`) is the trend and seasonal feature that is generated using the fourier features and deterministic process of the `statsmodels` API.
+
+### Model Development
+Hybrid Model with following models:
+- Multi output regressor of Ridge regression
+- XGBoost regressor with 100 estimators and learning rate of 0.05.
+
+### Forecasted Result
+![image](https://github.com/HkFromMY/store-sales-forecasting/assets/48499555/0abadb22-6846-489a-be35-cb9c40633a4b)
